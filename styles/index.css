@@ -1,6 +1,9 @@
 html, body{
     background-color: #F6F3EF;
 }
+* {
+    box-sizing: border-box;
+}
 
 header {
     position:fixed; left:0; top:0;
@@ -62,6 +65,8 @@ header nav > a {
     font-size:11.25rem;
     font-family: 'Port Lligat Slab' , sans-serif;
     color:#280266;
+    letter-spacing: 0.05em;
+    text-shadow:10px 4px 4px rgba(0,0,0,0.3) ;
 }
 #wrap .swiper-wrapper .intro .info_wrap .title .years  {
     text-align: right;
@@ -286,5 +291,169 @@ header nav > a {
     width:70%;
     border-radius: 30px;
     left:0px;
+    
+}
+/* 3행=================================================== */
+#wrap .project {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    height:100vh;
+    /* padding:0 100px; */
+    width:1900px;
+    position:relative;
+    margin: 0 auto;
+}
+#wrap .project .project-left,#wrap .project .project-right {
+    
+    
+}
+#wrap .project .project-left {
+    position:relative;
+    z-index:10;
+    padding-top:60px;
+    /* border:3px blue solid; */
+    justify-content: center;
+    /* overflow: hidden; */
+    height:100%;
+    align-items: center;padding-top: 300px;
+    width:55%;
+    
+
+}
+#wrap .project .project-left .left-bg {
+    width:50%;
+    background-color: #DBDBDB;
+    position:absolute;
+    height:100%;
+    /* border-top-right-radius: 40px; */
+    z-index:0;
+    top:0;
+    right:0;
+    
+}
+#wrap .project .project-left .barnd-title {
+    position:absolute;
+    top:250px;
+    left:80px;
+    z-index: 50;
+    font-size: 7rem;
+    font-weight:700;
+    color:rgba(62, 42, 91, 0.5);
+    /* border:1px solid red; */
+
+}
+#wrap .project .project-left .mockup_img {
+    max-width:95%;
+    z-index: 30;
+    position:relative ;
+    margin-bottom: 30px;
+    margin-top:60px;
+    /* margin:0 auto; */
+    
+}
+#wrap .project .project-right {
+    /* border: 3px solid red; */
+    height:100%;
+    padding:165px 90px;
+    width:45%;
+    background-image: url(../images/ameli-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+#wrap .project .project-right .project_info {}
+#wrap .project .project-right .project_info .info_title {
+    width:380px;
+    border-radius: 30px;
+    border:1px solid #C3FFF2;
+    background-color: #280266;
+    margin-bottom:69px ;
+
+}
+#wrap .project .project-right .project_info .info_title span {
+     font-weight:700;
+    font-size:1.438rem;
+    color:#C3FFF2;
+    
+    padding:10px 14px;
+    text-align: left;
+    display: block;
+    
+}
+#wrap .project .project-right .project_info .tag {
+    border:1px solid #fff;
+    width:fit-content;
+    border-radius: 30px;
+}
+#wrap .project .project-right .project_info .tag span {
+    color:#fff;
+    display: inline-block;
+    padding:5px 10px;
+}
+#wrap .project .project-right .project_info h3 {
+    font-size:3.125rem ;
+    color:#C3FFF2;
+    font-weight:700;
+    padding: 10px 10px;
+    border-bottom: 1px solid #C3FFF2;
+}
+#wrap .project .project-right .project_info .tag span {}
+#wrap .project .project-right .project_info {}
+#wrap .project .project-right .project_info_2 {
+    padding:63px 0;
+}
+#wrap .project .project-right .project_info_2 .info_grid {
+    display: grid;
+    gap:13px;
+    font-size:1.125rem;
+    
+}
+#wrap .project .project-right .project_info_2 .info_grid .label em {
+    color:#fff;
+    width:90px;
+    display: inline-block;
+}
+#wrap .project .project-right .project_info_2 .info_grid span {
+    color:#fff;
+    margin-left:30px;
+}
+#wrap .project .project-right .project_desc {
+    margin-top:54px;
+}
+#wrap .project .project-right .project_desc p {
+    margin-bottom: 20px;
+    color:#fff;
+}
+#wrap .project .project-right .project_buttons {
+    display: flex;
+    gap:25px;
+}
+#wrap .project .project-right .project_buttons .project_btn {
+    padding:13px 30px;
+    border:#C3FFF2 solid 1px;
+    background-color: #C3FFF2;
+    border-radius:10px;
+    color:#280266;
+    font-weight:500;
+    
+}
+#wrap .project .project-right .project_buttons .btn2{
+    background-color: #fff;
+}
+
+/* 폴로================================== */
+#wrap .project.reverse {
+    flex-direction: row-reverse;
+    
+}
+#wrap .project.reverse .project-left {
+    width:55%;
+    
+}
+#wrap .project.reverse .project-right {
+    
+    width:45% !important; 
     
 }
