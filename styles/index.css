@@ -18,7 +18,7 @@ header  nav {
     text-align: center;
     gap:20px;
 }
-header  nav a {
+header nav > a {
     color:#300D6A;
     font-size: 1.438rem;
     border:#300D6A 1px solid;
@@ -28,9 +28,263 @@ header  nav a {
 #wrap {
     height:100vh;
 }
+#wrap .swiper-wrapper {
+    /* height:calc(100vh - 80px); */
+    
+}
+/* 인트로 1행 */
 #wrap .swiper-wrapper .intro {
     display: flex; 
     flex-flow: column nowrap; /* 수직배치 */
-    justify-content: center; align-items:center; /* 교차 가운데 */
-    text-align: center;
+    justify-content: center;
+     align-items:center; /* 교차 가운데 */
+     text-align: center;
+     position:relative;
+     
+}
+#wrap .swiper-wrapper .intro .info_wrap {
+    
+}
+#wrap .swiper-wrapper .intro .info_wrap .title {
+    /* margin-top:325px; */
+}
+#wrap .swiper-wrapper .intro .info_wrap .title .subtitle {
+    display:flex;
+    align-items: center;
+}
+#wrap .swiper-wrapper .intro .info_wrap .title .subtitle > span {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #280266;
+    padding:4px 10px;
+}
+#wrap .swiper-wrapper .intro .info_wrap .title .subtitle span img {}
+#wrap .swiper-wrapper .intro .info_wrap .title h1  {
+    font-size:11.25rem;
+    font-family: 'Port Lligat Slab' , sans-serif;
+    color:#280266;
+}
+#wrap .swiper-wrapper .intro .info_wrap .title .years  {
+    text-align: right;
+    font-size: 1.25rem;
+    
+    background-color: #fff;
+    border:4px solid #C3FFF2;
+    width:max-content;
+    float: right;
+    border-radius: 30px;
+    box-shadow: 3px 4px rgba(0,0,0,0.13);
+    
+}
+#wrap .swiper-wrapper .intro .info_wrap .title .years span {
+    display: inline-block;
+    font-weight:600;
+    padding:5px 10px;
+}
+#wrap .swiper-wrapper .intro .info_wrap .bottom_wrap {
+    clear: both;
+    margin-top: 354px;
+    display: block;
+    text-align: left;
+    position:absolute;
+    border:3px solid red;
+    bottom:0; left:63px;
+}
+#wrap .swiper-wrapper .intro .info_wrap .bottom_wrap > * {
+    
+}
+#wrap .swiper-wrapper .intro .info_wrap .bottom_wrap span {
+    color:#280266;
+    font-size: 2rem;
+    margin-right:30px;
+    font-family: 'Source Serif 4',serif;
+}
+#wrap .swiper-wrapper .intro .info_wrap .bottom_wrap .line_wrap {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+    margin-top:30px;
+
+}
+#wrap .swiper-wrapper .intro .info_wrap .bottom_wrap .line_wrap .line{
+    display: inline-block;
+    width:100%;
+    height:3px;
+    background-color: #280266;
+}
+/* 2행============== */
+#wrap .profile {
+    display: flex; 
+    flex-flow: column wrap; /* 수직배치 */
+    justify-content: center;
+    align-items:center; /* 교차 가운데 */
+
+    
+}
+#wrap .profile .profile_section {
+    display: flex;
+    margin: 300px auto 0;
+    width:1700px;
+    /* border:1px solid red; */
+    height:90vh;
+    justify-content: center;
+    
+    
+}
+#wrap .profile .profile_section .section_wrap {
+    display: flex;
+    
+}
+#wrap .profile .profile_section .section_wrap h4 {
+    /* border:1px solid red; */
+    margin-bottom:44px;
+}
+#wrap .profile .profile_section p {}
+#wrap .profile .profile_section .profile_left {
+    font-size: 1.063rem;
+    margin-right: 141px;
+}
+#wrap .profile .profile_section .profile_left .name {
+    margin-right:141px ;
+    margin-bottom:20px;
+    font-size:1.5rem;
+    font-weight:600;
+    
+}
+#wrap .profile .profile_section .profile_left .name span{
+    margin-left:10px;
+    color:#808080;
+    font-weight: 700;
+}
+#wrap .profile .profile_section .profile_left > h3 {
+    font-size: 1.688rem;
+    border:2px solid #280266;
+    font-weight: 700;
+    display:inline-block;
+    background: #fff;
+    padding:10px 14px;
+    width:388px;
+    border-radius: 30px;
+    margin-bottom: 49px;
+
+}
+#wrap .profile .profile_section .profile_left img {
+    display: block;
+    margin-bottom: 46px;;
+}
+#wrap .profile .profile_section .profile_left .birth {
+    margin-bottom:20px;
+}
+#wrap .profile .profile_section .profile_left .contact {
+    display: grid;
+    gap:20px;
+}
+#wrap .profile .profile_section .profile_left .contact {}
+#wrap .profile .profile_section .profile_right {
+   height:90vh;
+    /* border: 1px solid blue; */
+    /* justify-content:space-between; */
+    margin-right: 111px;
+}
+#wrap .profile .profile_section h4 {
+    color:#280266;
+    font-size: 1.375rem;
+    font-weight:700;
+    border-bottom: #280266 solid 1px;
+    padding:5px;
+}
+#wrap .profile .profile_section .date {
+    font-weight:500;
+    font-size: 1.063rem;
+    
+}
+#wrap .profile .profile_section ul {
+    margin-bottom: 91px;
+}
+/* #wrap .profile .profile_section .section-skills ul li {
+    border:1px solid red;
+    display: grid;
+    gap:23px;
+} */
+#wrap .profile .profile_section .desc {
+    color: #808080;
+}
+#wrap .profile .profile_section .date ul {display: flex;}
+#wrap .profile .profile_section .profile_right ul {
+    display: grid;
+    gap:23px;
+}
+#wrap .profile .profile_section h4 {
+    /* display: inline-block; */
+    width:100%;
+}
+#wrap .profile .profile_section .profile_right ul li {
+    display: flex;
+    gap:30px;
+    /* border:1px solid green; */
+    
+}
+#wrap .profile .profile_section .section-skills ul li {
+    margin-bottom:23px; ;
+    /* border:1px solid green; */
+}
+#wrap .profile .profile_section ul li .date{
+    width:155px;
+    /* border:1px solid green; */
+}
+/* educatio */
+#wrap .profile .profile_section .profile_right .section_education {
+    margin-bottom:;
+}
+/* skill */
+#wrap .profile .profile_section .section-skills {
+    display: flex;
+    flex-direction: column;
+    gap:30px; 
+   /*  border-left: #280266 solid 1px; */
+    padding-left: 110px;
+    width:fit-content;
+    
+}
+#wrap .profile .profile_section .section-skills ul {}
+#wrap .profile .profile_section .section-skills li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:relative;
+    gap:20px;
+}
+#wrap .profile .profile_section .section-skills .skill-name {
+    min-width:100px;
+
+}
+.bar-wrap{
+    display:flex;
+    align-items: center;
+    gap:10px;
+
+}
+#wrap .profile .profile_section .section-skills .percent{
+    text-align: right;
+    color: #808080;
+}
+#wrap .profile .profile_section .section-skills .bar{
+    width:130px;
+    height: 10px;
+    background: #D9D9D9;
+    margin-left: 10px;
+    position:relative;
+    border-radius: 30px;
+    margin-right:;
+    
+}
+#wrap .profile .profile_section .section-skills .bar::before{
+    content: '';
+    position:absolute;
+    height:100%;
+    background:#280266;
+    width:70%;
+    border-radius: 30px;
+    left:0px;
+    
 }
