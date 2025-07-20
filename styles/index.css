@@ -149,7 +149,7 @@ header nav > a {
     display: flex;
     margin: 200px auto 0;
     width:1400px;
-    border:1px solid red;
+    /* border:1px solid red; */
     height:90vh;
     justify-content: center;
     
@@ -165,14 +165,14 @@ header nav > a {
 }
 #wrap .profile .profile_section p {}
 #wrap .profile .profile_section .profile_left {
-    font-size: 1.063rem;
-    margin-right: 141px;
-    border:3px solid red;
+    font-size: 0.938rem;
+    margin-right: 120px;
+    /* border:3px solid red; */
 }
 #wrap .profile .profile_section .profile_left .name {
     margin-right:141px ;
     margin-bottom:20px;
-    font-size:1.5rem;
+    font-size: 0.938rem;
     font-weight:600;
     
 }
@@ -196,6 +196,10 @@ header nav > a {
 #wrap .profile .profile_section .profile_left img {
     display: block;
     margin-bottom: 46px;
+    width: 250px;
+    height:auto;
+    
+    
 }
 #wrap .profile .profile_section .profile_left .birth {
     margin-bottom:20px;
@@ -220,7 +224,7 @@ header nav > a {
 }
 #wrap .profile .profile_section .date {
     font-weight:500;
-    font-size: 1.063rem;
+    font-size: 0.938rem;
     
 }
 #wrap .profile .profile_section ul {
@@ -486,12 +490,39 @@ header nav > a {
     width:55%;
     
 }
+#wrap .project.reverse .project-left .barnd-title {
+    color:#041E3A;
+}
 #wrap .project.reverse .project-right {
     
     width:45% !important; 
     
+    /* border: 3px solid red; */
+    height:100%;
+    padding:165px 90px;
+    width:45%;
+    background-image: url(../images/polo_background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
 }
-
+#wrap .project.reverse .project-right .project-right-wrap .project_info .info_title {
+    background:#233548;
+    border: 1px solid #F8F4E3;
+}
+#wrap .project.reverse .project-right .project-right-wrap .project_info .info_title span {
+    color:#F8F4E3;
+}
+#wrap .project.reverse .project-right .project-right-wrap .project_info h3{
+    color:#F8F4E3;
+}
+#wrap .project.reverse .project-right .project-right-wrap  .btn1 {
+    background-color: #F8F4E3;
+}
+#wrap .project.reverse .project-right .project-right-wrap .project_buttons a {
+    color:#041E3A;
+}
 /* 4행======================= */
 #wrap .design {
 
@@ -535,7 +566,7 @@ header nav > a {
     text-align: center;
 }
 #wrap .design_2 .container h4 {
-    font-size: 5.625rem;
+    font-size: 5.5rem;
     color:#280266;
     margin-bottom: 150px;
 }
@@ -554,7 +585,32 @@ header nav > a {
     border:3px solid green;
 }
 #wrap .design_2 .container #detail_swiper .swiper-wrapper .swiper-slide img {
-    width:100%; /* height: 100%; */
+    /* width:100%;  *//* height: 100%; */
     display: block;
     
+}
+
+/* 발표용 */
+#wrap .ppt {
+    position: relative;
+}
+#wrap .ppt .container img {
+    max-width:1465px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display:block;
+    position: absolute;
+}
+
+#wrap .ppt2 {
+    position: relative;
+}
+#wrap .ppt2 .container img {
+    max-width:1465px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display:block;
+    position: absolute;
 }
