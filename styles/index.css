@@ -459,10 +459,13 @@ header nav > a {
 }
 #wrap .project .project-right .project_desc {
     margin-top:54px;
+    
 }
 #wrap .project .project-right .project_desc p {
     margin-bottom: 20px;
     color:#fff;
+    line-height:1.6;
+    font-size:0.9rem;
 }
 #wrap .project .project-right .project_buttons {
     display: flex;
