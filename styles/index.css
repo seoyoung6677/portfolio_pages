@@ -174,7 +174,7 @@ header nav > a {
     margin-bottom:20px;
     font-size: 0.938rem;
     font-weight:600;
-    
+    /* border:3px solid blue; */
 }
 #wrap .profile .profile_section .profile_left .name span{
     margin-left:10px;
@@ -212,8 +212,8 @@ header nav > a {
 #wrap .profile .profile_section .profile_right {
    height:90vh;
     /* border: 1px solid blue; */
-    /* justify-content:space-between; */
-    margin-right: 111px;
+    justify-content:space-between;
+    /* margin-right: 120px; */
 }
 #wrap .profile .profile_section h4 {
     color:#280266;
@@ -237,6 +237,8 @@ header nav > a {
 } */
 #wrap .profile .profile_section .desc {
     color: #808080;
+    line-height:1.6;
+    font-size: 0.9rem;
 }
 #wrap .profile .profile_section .date ul {display: flex;}
 #wrap .profile .profile_section .profile_right ul {
@@ -249,7 +251,7 @@ header nav > a {
 }
 #wrap .profile .profile_section .profile_right ul li {
     display: flex;
-    gap:30px;
+    gap:10px;
     /* border:1px solid green; */
     
 }
@@ -264,6 +266,8 @@ header nav > a {
 /* educatio */
 #wrap .profile .profile_section .profile_right .section_education {
     margin-bottom:;
+    
+    
 }
 /* skill */
 #wrap .profile .profile_section .section-skills {
@@ -312,10 +316,32 @@ header nav > a {
     position:absolute;
     height:100%;
     background:#280266;
-    width:70%;
+    width:80%;
     border-radius: 30px;
     left:0px;
     
+}
+#wrap .profile .profile_section .section-skills .ph::before{
+    width:60% !important;
+}
+#wrap .profile .profile_section .section-skills .html::before{
+    width:70% !important;
+}
+#wrap .profile .profile_section .section-skills .il::before{
+    width:60% !important;
+}
+
+#wrap .profile .profile_section .section-skills .git::before{
+    width:50% !important;
+}
+#wrap .profile .profile_section .section-skills .javascript::before{
+    width:30% !important;
+}
+#wrap .profile .profile_section .section-skills .plugin::before{
+    width:30% !important;
+}
+#wrap .profile .profile_section .section-skills .react::before{
+    width:30% !important;
 }
 /* 3행=================================================== */
 #wrap .project {
@@ -524,6 +550,44 @@ header nav > a {
     background-color: #F8F4E3;
 }
 #wrap .project.reverse .project-right .project-right-wrap .project_buttons a {
+    color:#041E3A;
+}
+/* 널담================================== */
+#wrap .project .Nuldam {
+    flex-direction: row-reverse;
+    
+}
+
+#wrap .project.Nuldam .project-left .barnd-title {
+    color:#0A46D7;
+}
+#wrap .project.Nuldam .project-right {
+    
+    
+    
+    /* border: 3px solid red; */
+  
+    background-image: url(../images/nuldam_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+#wrap .project.Nuldam .project-right .project-right-wrap .project_info .info_title {
+    background:#2925f3;
+    border: 1px solid #F8F4E3;
+    
+}
+#wrap .project.Nuldam .project-right .project-right-wrap .project_info .info_title span {
+    color:#F8F4E3;
+}
+#wrap .project.Nuldam .project-right .project-right-wrap .project_info h3{
+    color:#ffffff;
+}
+#wrap .project .Nuldam .project-right .project-right-wrap  .btn1 {
+    background-color: #F8F4E3;
+}
+#wrap .project .Nuldam .project-right .project-right-wrap .project_buttons a {
     color:#041E3A;
 }
 /* 4행======================= */
