@@ -43,7 +43,9 @@ const detail = new Swiper('.detail_design_swiper',{
 const snsProject = document.querySelectorAll('#sns_swiper .swiper-slide ')
 const popup= document.querySelector('.popup_bg')
 console.log(snsProject,popup);
-popup.addEventListener('click',()=>{popup.style.display='none'})
+popup.addEventListener('click',()=>{popup.style.display='none'
+    wrap.mousewheel.enable();
+})
 
 for(let sns of snsProject){
     sns.addEventListener('click',()=>{

@@ -668,7 +668,7 @@ header nav > a {
 /* 디자인 팝업 */
 .popup_bg {
     background: rgba(0,0,0, 0.5);
-    position: fixed; left:0; top:200px;
+    position: fixed; left:0; top:170px;
     z-index:80; width:100%; height:100vh;
     display: none; /* 부모한테주기 클릭하기전에 안보이게 */
 }
