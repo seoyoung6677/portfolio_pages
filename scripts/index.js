@@ -23,11 +23,11 @@ const sns = new Swiper('#sns_swiper',{
 
 
 // detail 디자인
-const detailDesign = document.querySelectorAll('#detail_swiper .swiper-slide ')
+/* const detailDesign = document.querySelectorAll('#detail_swiper .swiper-slide ')
 const detail = new Swiper('#detail_swiper',{
     slidesPerView:4,
     autoplay:{delay:0,},
     speed:4000,
     loop:true,
     spaceBetween:20,
-})
+}) */
