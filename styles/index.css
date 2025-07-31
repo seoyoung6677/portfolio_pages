@@ -590,4 +590,92 @@ header nav > a {
 #wrap .project .Nuldam .project-right .project-right-wrap .project_buttons a {
     color:#041E3A;
 }
-/* 4행======================= */
+/* 그래픽 디자인======================= */
+#Graphic_design {}
+#Graphic_design .swiper-container {
+    width:1620px;
+    margin:120px auto 0;
+    height:700px;
+    /* display: flex; */
+    /* background-color: aqua; */
+    /* display: flex; */
+    overflow: hidden;
+    
+}
+#Graphic_design .swiper-container .design_container {
+    display: flex;
+    margin-top:100px;
+}
+#Graphic_design .swiper-container .design_container .Graphic_design_title {}
+#Graphic_design .swiper-container .Graphic_design_title h4 {
+    font-size: 3rem;
+    font-weight: 700;
+    color:#300D6A;
+
+
+}
+#Graphic_design .swiper-container .design_container .design_left_wrap {}
+#Graphic_design .swiper-container .design_container .design_left_wrap #sns_swiper {
+    width:1000px;
+    
+}
+#Graphic_design .swiper-container .design_container .design_left_wrap #sns_swiper .swiper-wrapper {}
+#Graphic_design .swiper-container .design_container .design_left_wrap #sns_swiper .swiper-wrapper .swiper-slide {
+     width:200px; height:300px;
+     /* border:2px solid red; */
+}
+#Graphic_design .swiper-container .design_container .design_left_wrap #sns_swiper .swiper-wrapper .swiper-slide img {
+    width:100%;
+    display: block;
+    height:100%;
+}
+#Graphic_design .swiper-container .design_container .design_left_wrap #poster_swiper {
+    width:1000px;
+    margin-top:100px;
+}
+#Graphic_design .swiper-container .design_container .design_left_wrap #poster_swiper .swiper-wrapper {}
+#Graphic_design .swiper-container .design_container .design_left_wrap #poster_swiper .swiper-wrapper .swiper-slide {
+    width:500px; height:200px;
+}
+#Graphic_design .swiper-container .design_container .design_left_wrap #poster_swiper .swiper-wrapper .swiper-slide-active{
+
+    width:300px;
+}
+#Graphic_design .swiper-container .design_container .design_left_wrap #poster_swiper .swiper-wrapper .swiper-slide img {
+    width:100%;
+    display: block;
+}
+#Graphic_design .swiper-container #poster_swiper {}
+#Graphic_design .swiper-container #poster_swiper .swiper-wrapper {}
+#Graphic_design .swiper-container #poster_swiper .swiper-wrapper .swiper-slide {}
+#Graphic_design .swiper-container #poster_swiper .swiper-wrapper .swiper-slide img {}
+/* 상세페이지 */
+#Graphic_design .swiper-container .design_container #detail_design_swiper {
+    margin-left:100px;
+}
+#Graphic_design .swiper-container .design_container #detail_design_swiper .swiper-wrapper .swiper-slide {
+    width:500px !important;
+    height:600px !important;
+    /* border:3px solid red; */
+}
+#Graphic_design .swiper-container .design_container #detail_design_swiper .swiper-wrapper .swiper-slide img {
+    width:100%;
+    display: block;
+    
+    /* border:3px solid blue; */
+}
+
+/* 디자인 팝업 */
+.popup_bg {
+    background: rgba(0,0,0, 0.5);
+    position: fixed; left:0; top:0;
+    z-index:80; width:100%; height:100vh;
+    display: none; /* 부모한테주기 클릭하기전에 안보이게 */
+}
+.popup_bg .popup {
+    width:700px; margin:0 auto;
+    height:80vh; overflow: auto;
+}
+.popup_bg .popup img {
+    width:100%;
+}

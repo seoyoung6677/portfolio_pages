@@ -23,11 +23,32 @@ const sns = new Swiper('#sns_swiper',{
 
 
 // detail 디자인
-/* const detailDesign = document.querySelectorAll('#detail_swiper .swiper-slide ')
-const detail = new Swiper('#detail_swiper',{
-    slidesPerView:4,
+
+const poster = new Swiper('#poster_swiper',{
+    slidesPerView:3,
     autoplay:{delay:0,},
     speed:4000,
     loop:true,
     spaceBetween:20,
-}) */
+})
+const detail = new Swiper('#detail_design_swiper',{
+    slidesPerView:1,
+    autoplay:{delay:0,},
+    speed:5000,
+    loop:true,
+    spaceBetween:20,
+})
+
+const designProject = document.querySelectorAll('#design_containers .swiper-slide');
+const popup = document.querySelector('.popup_bg');
+popup.addEventListener('click',()=>{popup.style.display='none'})
+
+for(let design of designProject){
+    sns.addEventListener('click',()=>{
+        popup.style.display ='block';
+        popup.children[0].children[0].src = design.childern[0].src;
+        //팝업 실행 시 전체 수직 Swiper 스크롤 가능 막기
+        wrap.mousewheel.disable(); //스크롤 풀기enable()
+        
+    })
+}
