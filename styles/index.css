@@ -730,4 +730,28 @@ header nav a:hover {
     transform: translateX(0);
 }
 
+.project-left h1 {
+  opacity: 0.3;
+  filter: blur(8px);
+  transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+              filter 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+            
+      z-index: 0;
+      position: relative;
+}
 
+.project-left h1.active {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* 공통 호버 */
+.swiper-slide .mockup_img {
+    transition: transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 20;
+    position: relative;
+}
+.swiper-slide .mockup_img:hover {
+    transform: scale(1.05) translateY(-8px);
+    z-index: 20;
+}

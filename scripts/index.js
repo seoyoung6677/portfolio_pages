@@ -12,33 +12,41 @@ document.querySelectorAll('nav a').forEach((obj)=>{
 });
 });
 
-//sns 디자인
-const sns = new Swiper('.sns_swiper',{
-    slidesPerView:4,
-    autoplay:{delay:0,},
-    speed:4000,
-    loop:true,
-    spaceBetween:20,
-})
+const sns = new Swiper('.sns_swiper', {
+  slidesPerView: 4,
+  loop: true,
+  speed: 2500,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  spaceBetween: 20,
+  lazy: true,
+  allowtouchMove:false,
+});
 
+const poster = new Swiper('.poster_swiper', {
+  slidesPerView: 3,
+  loop: true,
+  speed: 2500,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  spaceBetween: 20,
+  lazy: true,
+});
 
-// detail 디자인
-
-const poster = new Swiper('.poster_swiper',{
-    slidesPerView:3,
-    autoplay:{delay:0,},
-    speed:4000,
-    loop:true,
-    spaceBetween:20,
-})
-const detail = new Swiper('.detail_design_swiper',{
-    slidesPerView:1,
-    autoplay:{delay:0,},
-    speed:5000,
-    loop:true,
-    
-})
-
+const detail = new Swiper('.detail_design_swiper', {
+  slidesPerView: 1,
+  loop: true,
+  speed: 3000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  lazy: true,
+});
 //SNS 프로젝트 클릭 시 팝업실행(클릭한 이미지가 팝업 이미지로 교체)
 const snsProject = document.querySelectorAll('#sns_swiper .swiper-slide ')
 const popup= document.querySelector('.popup_bg')
@@ -57,33 +65,12 @@ for(let sns of snsProject){
     })
 }
 
-/* const lineWrap =document.querySelector('.line_wrap');
-const lines = [
-    lineWrap.querySelector('.line1'),
-    lineWrap.querySelector('.line2'),
-    lineWrap.querySelector('.line3'),
-];
-
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry => {
-        if (entry.isIntersecting){
-            lines.forEach((line, index)=>{
-                setTimeout(()=>{
-                    line.classList.add(`draw${index + 1}`);
-                    console.log(`${line.className}-> ${className} 추가도ㅓㅣㅁ`)
-                }, index * 400)
-            })
-        }
-    })
-})
-
-observer.observe(lineWrap); */
 console.log(document.querySelector('.line_wrap'));
 window.addEventListener('DOMContentLoaded', () => {
     const lineWrap = document.querySelector('.line_wrap');
     
     if (!lineWrap) {
-    console.warn('❗ .line_wrap 요소를 못 찾음!');
+    console.warn('.line_wrap 요소를 못 찾음!');
     return;
     }
     
@@ -99,7 +86,7 @@ window.addEventListener('DOMContentLoaded', () => {
     lines.forEach((line, index) => {
     setTimeout(() => {
     line.classList.add(`draw${index + 1}`);
-    console.log(`✅ draw${index + 1} 추가됨`);
+    console.log(`draw${index + 1} 추가됨`);
     }, index * 400);
     });
     }
@@ -108,8 +95,8 @@ window.addEventListener('DOMContentLoaded', () => {
     
     observer.observe(lineWrap);
     });
-
-    const spans = document.querySelectorAll('.info_title span');
+/* 
+const spans = document.querySelectorAll('.info_title span');
 
 const observer = new IntersectionObserver((entries) => {
 entries.forEach(entry => {
@@ -125,39 +112,32 @@ threshold: 0.6  // 요소가 60% 보일 때 작동 (필요하면 조절 가능)
 });
 
 spans.forEach(span => observer.observe(span));
+ */
+const spans = document.querySelectorAll('.info_title span');
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // 스팬 등장
+      entry.target.classList.add('active');
 
+      // 형제 영역(.project-left) 안의 h1 찾아서 0.6초 뒤에 효과 주기
+      const project = entry.target.closest('.project'); // 공통 부모
+      const h1 = project.querySelector('.project-left h1');
+      if (h1) {
+        setTimeout(() => h1.classList.add('active'), 600);
+      }
 
-const title = document.querySelector('.brand-title');
-const letters = title.textContent.split('');
-title.innerHTML = ''; // 기존 텍스트 제거
+    } else {
+      // 스팬 사라짐
+      entry.target.classList.remove('active');
 
-letters.forEach((letter, index) => {
-const span = document.createElement('span');
-span.textContent = letter;
-span.style.opacity = '0';
-span.style.display = 'inline-block';
-span.style.transform = 'translateY(20px)';
-span.style.transition = `opacity 0.5s ease ${index * 80}ms, transform 0.5s ease ${index * 80}ms`;
-title.appendChild(span);
-});
+      // h1도 사라짐
+      const project = entry.target.closest('.project');
+      const h1 = project.querySelector('.project-left h1');
+      if (h1) h1.classList.remove('active');
+    }
+  });
+}, { threshold: 0.6 });
 
-// 등장 시 애니메이션 적용
-const observer2 = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-const spans = entry.target.querySelectorAll('span');
-if (entry.isIntersecting) {
-spans.forEach(span => {
-span.style.opacity = '1';
-span.style.transform = 'translateY(0)';
-});
-} else {
-spans.forEach(span => {
-span.style.opacity = '0';
-span.style.transform = 'translateY(20px)';
-});
-}
-});
-});
-
-observer2.observe(title);
+spans.forEach(span => observer.observe(span));
