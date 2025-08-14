@@ -730,19 +730,30 @@ header nav a:hover {
     transform: translateX(0);
 }
 
-.project-left h1 {
-  opacity: 0.3;
-  filter: blur(8px);
-  transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1),
-              filter 1.2s cubic-bezier(0.25, 1, 0.5, 1);
-            
-      z-index: 0;
-      position: relative;
+/* =========================
+   h1 기본 상태
+   - clip-path로 왼→오 100% 가려놓기 (오른쪽 100%)
+   - 투명도도 살짝 낮춰서 부드럽게 시작
+========================= */
+.project-left h1{
+  opacity: .3;
+  clip-path: inset(0 100% 0 0); /* top right bottom left */
+  transition:
+    clip-path 2.0s cubic-bezier(.25,1,.5,1),
+    opacity   1.0s cubic-bezier(.25,1,.5,1);
+  will-change: clip-path, opacity;
 }
 
-.project-left h1.active {
+/* =========================
+   활성화: 마스크(클립) 풀리며 왼→오로 드러남
+========================= */
+.project-left h1.active{
   opacity: 1;
-  filter: blur(0);
+  clip-path: inset(0 0 0 0);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .project-left h1{ transition:none; opacity:1; clip-path: inset(0 0 0 0); }
 }
 
 /* 공통 호버 */
