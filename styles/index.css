@@ -624,6 +624,50 @@ header nav a:hover {
 #wrap .project .Nuldam .project-right .project-right-wrap .project_buttons a {
     color:#041E3A;
 }
+
+/* 르라보 */
+#wrap .swiper-slide.project.reverse.lelabo .barnd-title {
+    color:#3d3d3d;
+}
+#wrap .swiper-slide.project.reverse.lelabo .project-right {
+    
+
+    background-image: url(../images/lelabo_bg\ \(2\).jpg);
+    background-size: cover;
+    background-position: left !important;
+    background-repeat: no-repeat;
+    
+    
+}
+#wrap .swiper-slide.project.reverse.lelab
+#wrap .swiper-slide.project.reverse.lelabo .project-right .project_info h3 {
+    color:#343336;
+    border:1px solid #fff !important;
+}
+
+#wrap .swiper-slide.project.reverse.lelabo .project-right .project-right-wrap .project_info .info_title {
+    background:#525057;
+    border: 1px solid #F8F4E3;
+    
+}
+#wrap .swiper-slide.project.reverse.lelabo .project-right .project-right-wrap .project_info .info_title span {
+    color:#F8F4E3;
+}
+#wrap .swiper-slide.project.reverse.lelabo .project-right .project-right-wrap .project_info h3{
+    color:#ffffff;
+    border-bottom:1px solid #fff !important;
+}
+#wrap .swiper-slide.project.reverse.lelabo .project-right .project-right-wrap  .btn1 {
+    background-color: #F8F4E3;
+}
+#wrap .swiper-slide.project.reverse.lelabo .project-right .project-right-wrap .project_buttons a {
+    color:#000;
+    border:1px solid #fff !important; 
+}
+#wrap .swiper-slide.project.reverse.lelabo .project-right .project-right-wrap .project_buttons > * {
+    color:#000;
+    border:1px solid #fff !important; 
+}
 /* 그래픽 디자인======================= */
 #Graphic_design {}
 #Graphic_design .swiper-container {
