@@ -1,5 +1,7 @@
 html, body{
     background-color: #F6F3EF;
+    margin:0;
+    min-width: 1280px;
 }
 * {
     box-sizing: border-box;
@@ -377,7 +379,7 @@ header nav a:hover {
 #wrap .profile .profile_section .section-skills .react::before{
     width:30% !important;
 }
-/* 3행=================================================== */
+/* 3행=================================================== 아멜리 */
 #wrap .project {
     display: flex;
     align-items: center;
@@ -481,12 +483,12 @@ header nav a:hover {
     
 }
 #wrap .project .project-right .project_info .tag {
-    border:1px solid #fff;
+    border:1px solid #C3FFF2;
     width:fit-content;
     border-radius: 30px;
 }
 #wrap .project .project-right .project_info .tag span {
-    color:#fff;
+    color:#C3FFF2;
     display: inline-block;
     padding:5px 10px;
 }
@@ -505,8 +507,18 @@ header nav a:hover {
 #wrap .project .project-right .project_info_2 .info_grid {
     display: grid;
     gap:13px;
-    font-size:1.125rem;
     
+    
+}
+#wrap .project .project-right .project_info_2 .info_grid .label {
+    grid-template-columns: 120px 1fr;
+    font-size:1.125rem;
+    display: grid;
+    /* border: 2px solid red; */
+    align-items: start;
+}
+#wrap .project .project-right .project_info_2 .info_grid .label .plugin{
+    display: block;
 }
 #wrap .project .project-right .project_info_2 .info_grid .label em {
     color:#fff;
@@ -516,6 +528,7 @@ header nav a:hover {
 #wrap .project .project-right .project_info_2 .info_grid span {
     color:#fff;
     margin-left:30px;
+    line-height: 1.5;
 }
 #wrap .project .project-right .project_desc {
     margin-top:54px;
@@ -579,12 +592,21 @@ header nav a:hover {
 }
 #wrap .project.reverse .project-right .project-right-wrap .project_info h3{
     color:#F8F4E3;
+    border-bottom: 1px solid #fff;
 }
 #wrap .project.reverse .project-right .project-right-wrap  .btn1 {
     background-color: #F8F4E3;
 }
 #wrap .project.reverse .project-right .project-right-wrap .project_buttons a {
     color:#041E3A;
+}
+#wrap .project.reverse .project_info .tag {
+    border : 1px solid #F8F4E3;
+    
+}
+#wrap .project.reverse .project_info .tag span {
+    color: #F8F4E3;
+
 }
 /* 널담================================== */
 #wrap .project .Nuldam {
@@ -609,7 +631,7 @@ header nav a:hover {
 }
 #wrap .project.Nuldam .project-right .project-right-wrap .project_info .info_title {
     background:#2925f3;
-    border: 1px solid #F8F4E3;
+    
     
 }
 #wrap .project.Nuldam .project-right .project-right-wrap .project_info .info_title span {
@@ -617,6 +639,7 @@ header nav a:hover {
 }
 #wrap .project.Nuldam .project-right .project-right-wrap .project_info h3{
     color:#ffffff;
+    border-bottom: 1px solid #F8F4E3;
 }
 #wrap .project .Nuldam .project-right .project-right-wrap  .btn1 {
     background-color: #F8F4E3;
@@ -644,7 +667,12 @@ header nav a:hover {
     color:#343336;
     border:1px solid #fff !important;
 }
-
+#wrap .swiper-slide.project.reverse.lelabo .tag {
+    border: 1px solid #F8F4E3;
+}
+#wrap .swiper-slide.project.reverse.lelabo .tag span {
+    color: #F8F4E3;
+}
 #wrap .swiper-slide.project.reverse.lelabo .project-right .project-right-wrap .project_info .info_title {
     background:#525057;
     border: 1px solid #F8F4E3;
@@ -809,4 +837,12 @@ header nav a:hover {
 .swiper-slide .mockup_img:hover {
     transform: scale(1.05) translateY(-8px);
     z-index: 20;
+}
+
+/* 프로젝트 공통버튼 호버 */
+.project_buttons a:hover  {
+    transform: scale(1.1);
+} 
+.project_buttons a{
+    transition: transform 0.2s ease;
 }
